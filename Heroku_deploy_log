@@ -1,0 +1,126 @@
+radha@radha-Lenovo-IdeaPad-Z510:/media/radha/FUN1/UDEMY/Complete_nodeJS_bootcamp/node-todo-api$ heroku create
+Creating app... done, ⬢ fierce-escarpment-87030
+https://fierce-escarpment-87030.herokuapp.com/ | https://git.heroku.com/fierce-escarpment-87030.git
+radha@radha-Lenovo-IdeaPad-Z510:/media/radha/FUN1/UDEMY/Complete_nodeJS_bootcamp/node-todo-api$ heroku addons:create mongolab:sandbox
+Creating mongolab:sandbox on ⬢ fierce-escarpment-87030... !
+ ▸    Please verify your account to install this add-on plan (please enter a credit card) For more information, see
+ ▸    https://devcenter.heroku.com/categories/billing Verify now at https://heroku.com/verify
+radha@radha-Lenovo-IdeaPad-Z510:/media/radha/FUN1/UDEMY/Complete_nodeJS_bootcamp/node-todo-api$ heroku addons:create mongolab:sandbox
+Creating mongolab:sandbox on ⬢ fierce-escarpment-87030... !
+ ▸    Please verify your account to install this add-on plan (please enter a credit card) For more information, see
+ ▸    https://devcenter.heroku.com/categories/billing Verify now at https://heroku.com/verify
+radha@radha-Lenovo-IdeaPad-Z510:/media/radha/FUN1/UDEMY/Complete_nodeJS_bootcamp/node-todo-api$ heroku addons:create mongolab:sandbox
+Creating mongolab:sandbox on ⬢ fierce-escarpment-87030... free
+Welcome to mLab.  Your new subscription is being created and will be available shortly.  Please consult the mLab Add-on Admin UI to check on its progress.
+Created mongolab-curved-90665 as MONGODB_URI
+Use heroku addons:docs mongolab to view documentation
+
+MONGODB_URI: mongodb://heroku_9jfrsz88:6mlpe903ubbljkka1746bcbli@ds251210.mlab.com:51210/heroku_9jfrsz88
+radha@radha-Lenovo-IdeaPad-Z510:/media/radha/FUN1/UDEMY/Complete_nodeJS_bootcamp/node-todo-api$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   package.json
+	modified:   server/db/mongoose.js
+	modified:   server/server.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+radha@radha-Lenovo-IdeaPad-Z510:/media/radha/FUN1/UDEMY/Complete_nodeJS_bootcamp/node-todo-api$ git commit -am 'Setup App for Heroku'
+[master 11807d7] Setup App for Heroku
+ 3 files changed, 11 insertions(+), 4 deletions(-)
+radha@radha-Lenovo-IdeaPad-Z510:/media/radha/FUN1/UDEMY/Complete_nodeJS_bootcamp/node-todo-api$ git push heroku master
+Counting objects: 66, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (60/60), done.
+Writing objects: 100% (66/66), 34.85 KiB | 3.17 MiB/s, done.
+Total 66 (delta 26), reused 0 (delta 0)
+remote: Compressing source files... done.
+remote: Building source:
+remote: 
+remote: -----> Node.js app detected
+remote: 
+remote: -----> Creating runtime environment
+remote:        
+remote:        NPM_CONFIG_LOGLEVEL=error
+remote:        NODE_VERBOSE=false
+remote:        NODE_ENV=production
+remote:        NODE_MODULES_CACHE=true
+remote: 
+remote: -----> Installing binaries
+remote:        engines.node (package.json):  8.6.0
+remote:        engines.npm (package.json):   unspecified (use default)
+remote:        
+remote:        Resolving node version 8.6.0...
+remote:        Downloading and installing node 8.6.0...
+remote:        Using default npm version: 5.3.0
+remote: 
+remote: -----> Restoring cache
+remote:        Skipping cache restore (not-found)
+remote: 
+remote: -----> Building dependencies
+remote:        Installing node modules (package.json + package-lock)
+remote:        
+remote:        > nodemon@1.17.5 postinstall /tmp/build_b4a1e45ee1011001de628ac90e7ee9a0/node_modules/nodemon
+remote:        > node bin/postinstall || exit 0
+remote:        
+remote:        Love nodemon? You can now support the project via the open collective:
+remote:        > https://opencollective.com/nodemon/donate
+remote:        
+remote:        added 419 packages in 8.779s
+remote: 
+remote: -----> Caching build
+remote:        Clearing previous node cache
+remote:        Saving 2 cacheDirectories (default):
+remote:        - node_modules
+remote:        - bower_components (nothing to cache)
+remote: 
+remote: -----> Pruning devDependencies
+remote:        Skipping because npm 5.3.0 fails when running 'npm prune' due to a known issue
+remote:        https://github.com/npm/npm/issues/17781
+remote:        
+remote:        You can silence this warning by updating to at least npm 5.7.1 in your package.json
+remote:        https://devcenter.heroku.com/articles/nodejs-support#specifying-an-npm-version
+remote: 
+remote: -----> Build succeeded!
+remote: -----> Discovering process types
+remote:        Procfile declares types     -> (none)
+remote:        Default types for buildpack -> web
+remote: 
+remote: -----> Compressing...
+remote:        Done: 21.1M
+remote: -----> Launching...
+remote:        Released v4
+remote:        https://fierce-escarpment-87030.herokuapp.com/ deployed to Heroku
+remote: 
+remote: Verifying deploy... done.
+To https://git.heroku.com/fierce-escarpment-87030.git
+ * [new branch]      master -> master
+radha@radha-Lenovo-IdeaPad-Z510:/media/radha/FUN1/UDEMY/Complete_nodeJS_bootcamp/node-todo-api$ 
+
+ * [new branch]      master -> master
+radha@radha-Lenovo-IdeaPad-Z510:/media/radha/FUN1/UDEMY/Complete_nodeJS_bootcamp/node-todo-api$ heroku logs
+2018-06-07T03:42:23.342576+00:00 app[api]: Enable Logplex by user radha.sable25@gmail.com
+2018-06-07T03:42:23.138569+00:00 app[api]: Release v1 created by user radha.sable25@gmail.com
+2018-06-07T03:42:23.342576+00:00 app[api]: Release v2 created by user radha.sable25@gmail.com
+2018-06-07T03:42:23.138569+00:00 app[api]: Initial release by user radha.sable25@gmail.com
+2018-06-07T03:47:09.172448+00:00 heroku[router]: at=info code=H81 desc="Blank app" method=GET path="/" host=fierce-escarpment-87030.herokuapp.com request_id=89e1af21-70f9-42cb-94df-0210a57e114a fwd="103.25.171.185" dyno= connect= service= status=502 bytes= protocol=https
+2018-06-07T03:47:09.448256+00:00 heroku[router]: at=info code=H81 desc="Blank app" method=GET path="/favicon.ico" host=fierce-escarpment-87030.herokuapp.com request_id=7a9119de-e1fa-4e22-9526-7980f9576592 fwd="103.25.171.185" dyno= connect= service= status=502 bytes= protocol=https
+2018-06-07T03:58:56.055993+00:00 app[api]: Release v3 created by user radha.sable25@gmail.com
+2018-06-07T03:58:56.055993+00:00 app[api]: Attach MONGODB (@ref:mongolab-curved-90665) by user radha.sable25@gmail.com
+2018-06-07T04:03:54.000000+00:00 app[api]: Build started by user radha.sable25@gmail.com
+2018-06-07T04:04:11.969925+00:00 app[api]: Deploy 11807d74 by user radha.sable25@gmail.com
+2018-06-07T04:04:11.969925+00:00 app[api]: Release v4 created by user radha.sable25@gmail.com
+2018-06-07T04:04:11.984582+00:00 app[api]: Scaled to web@1:Free by user radha.sable25@gmail.com
+2018-06-07T04:04:12.000000+00:00 app[api]: Build succeeded
+2018-06-07T04:04:16.385407+00:00 heroku[web.1]: Starting process with command `npm start`
+2018-06-07T04:04:19.523127+00:00 app[web.1]: 
+2018-06-07T04:04:19.523145+00:00 app[web.1]: > todo-api@1.0.0 start /app
+2018-06-07T04:04:19.523147+00:00 app[web.1]: > node server/server.js
+2018-06-07T04:04:19.523148+00:00 app[web.1]: 
+2018-06-07T04:04:20.279072+00:00 app[web.1]: Started at port 50590
+2018-06-07T04:04:21.004816+00:00 heroku[web.1]: State changed from starting to up
+
