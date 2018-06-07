@@ -14,6 +14,9 @@ var {user} = require('./models/users');
 // mongoose.Promise = global.Promise;
 // mongoose.connect('mongodb://localhost:27017/TodoApp');
 var app = express();
+const port = process.env.PORT || 3000;
+
+
 app.use(bodyparser.json());   //setting up middleware to send json to the request
 
 app.post('/todos',(req,res) => {
@@ -56,8 +59,8 @@ app.get('/todos/:id',(req,res) => {
   });
 });
 
-app.listen(3000, ()=>{
-  console.log('Started on port 3000');
+app.listen(port, ()=>{
+  console.log(`Started at port ${port}`);
 });
 
 
